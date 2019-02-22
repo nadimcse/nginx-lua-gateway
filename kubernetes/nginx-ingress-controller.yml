@@ -5,10 +5,9 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
-  - hosts:
-    - lua.example.com
   rules:
-  - http:
+  - host: cafe.example.com
+    http:
       paths:
       - path: /nginx
         backend:
