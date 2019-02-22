@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx-lua-gateway
-        image: ns185174/nginx-lua-gateway:latest
+        image: doc185174/nginx-lua-gateway:latest
         ports:
         - containerPort: 80
 ---
