@@ -6,7 +6,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginx-lua-gateway-gateway
+      app: nginx-lua-gateway
   template:
     metadata:
       labels:
