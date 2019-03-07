@@ -21,7 +21,7 @@ spec:
           image: "doc185174/hello-ws:latest"
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
@@ -34,4 +34,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: http
+    targetPort: 8080
