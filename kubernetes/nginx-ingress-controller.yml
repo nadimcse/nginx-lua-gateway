@@ -21,4 +21,4 @@ spec:
       - path: /spring
         backend:
           serviceName: spring
-          servicePort: 8080
+          servicePort: 80
