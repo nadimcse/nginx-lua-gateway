@@ -6,15 +6,11 @@ spec:
   selector:
     matchLabels:
       app: spring
-      tier: backend
-      track: stable
   replicas: 1
   template:
     metadata:
       labels:
         app: spring
-        tier: backend
-        track: stable
     spec:
       containers:
         - name: spring
@@ -30,8 +26,7 @@ metadata:
 spec:
   selector:
     app: spring
-    tier: backend
   ports:
   - protocol: TCP
-    port: 80
+    port: 8080
     targetPort: 8080
