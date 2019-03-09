@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-spring
+spec:
+  selector:
+    matchLabels:
+      app: hello-spring
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-spring
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: hello
+          image: "doc185174/spring-boot-hello-world-example:latest"
+          ports:
+            - name: http
+              containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-spring
+spec:
+  selector:
+    app: hello-spring
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
