@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: hello-ws
-          image: "doc185174/hello-ws:latest"
+          image: "doc185174/hello-websocket:latest"
           ports:
             - name: http
               containerPort: 8080
