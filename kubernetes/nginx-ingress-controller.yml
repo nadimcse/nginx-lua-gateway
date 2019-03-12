@@ -16,3 +16,7 @@ spec:
         backend:
           serviceName: hello
           servicePort: 80
+      - path: /ws/?(.*)
+        backend:
+          serviceName: hello-ws
+          servicePort: 80
