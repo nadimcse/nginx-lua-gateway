@@ -7,10 +7,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: lua.example.com
+  - host: mysite.com
     http:
       paths:
-      - path: /spring
+      - path: /hello
         backend:
-          serviceName: spring
+          serviceName: hello
           servicePort: 80
