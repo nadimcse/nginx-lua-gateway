@@ -3,14 +3,14 @@ kind: Ingress
 metadata:
   name: nginx-lua-ingress
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: mysite.com
     http:
       paths:
-      - path: /hello
+      - path: /api/?(.*)
         backend:
           serviceName: hello
           servicePort: 8080
